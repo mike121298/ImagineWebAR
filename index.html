@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport"
@@ -12,7 +11,6 @@
         html {
             height: -webkit-fill-available;
         }
-
         body {
             margin: 0;
             padding: 0;
@@ -21,7 +19,6 @@
             width: 100vw;
             overflow: hidden;
         }
-
         .ctaDiv {
             display: flex;
             flex-direction: column;
@@ -35,7 +32,6 @@
             background: #fffa;
             z-index: 99;
         }
-
         #startARButton {
             padding: 10px 80px;
             /* 設定內邊距 */
@@ -44,11 +40,9 @@
             color: white;
             border: 20px solid transparent;
             /* 設定透明邊框 */
-
             /* 使用同一張圖片處理邊框 */
             border-image: url('BT_1.png') 50 stretch;
             /* 邊框圖片的切片設定 */
-
             /* 使用同一張圖片填充中間區域 */
             background-image: url("BT_2.png");
             background-repeat: no-repeat;
@@ -56,7 +50,6 @@
             /* 背景圖片置中 */
             background-size: 105% 105%;
             /* 背景圖片填充整個區域 */
-
             background-color: transparent;
             /* 確保背景透明 */
             display: inline-block;
@@ -64,9 +57,7 @@
             text-decoration: none;
             cursor: pointer;
         }
-
         #requestPermissionsButton {
-
             padding: 10px 40px;
             /* 設定內邊距 */
             font-size: 30px;
@@ -74,11 +65,9 @@
             color: white;
             border: 20px solid transparent;
             /* 設定透明邊框 */
-
             /* 使用同一張圖片處理邊框 */
             border-image: url('BT_1.png') 50 stretch;
             /* 邊框圖片的切片設定 */
-
             /* 使用同一張圖片填充中間區域 */
             background-image: url("BT_2.png");
             background-repeat: no-repeat;
@@ -86,7 +75,6 @@
             /* 背景圖片置中 */
             background-size: 105% 105%;
             /* 背景圖片填充整個區域 */
-
             background-color: transparent;
             /* 確保背景透明 */
             display: inline-block;
@@ -94,7 +82,6 @@
             text-decoration: none;
             cursor: pointer;
         }
-
         .loading-spinner {
             width: 80px;
             height: 80px;
@@ -110,16 +97,15 @@
         }
     </style>
 </head>
-
 <body>
     <!--IMAGETARGETS-->
-    <imagetarget id='coin' src='targets/coin.png'></imagetarget>
-    <imagetarget id='bow1' src='targets/bow1.png'></imagetarget>
-    <imagetarget id='bow2' src='targets/bow2.png'></imagetarget>
-    <imagetarget id='bow3' src='targets/bow3.png'></imagetarget>
-    <imagetarget id='vase1' src='targets/vase1.png'></imagetarget>
-    <imagetarget id='vase2' src='targets/vase2.png'></imagetarget>
-    <imagetarget id='vase3' src='targets/vase3.png'></imagetarget>
+		<imagetarget id='coin' src='targets/coin.png'></imagetarget>
+		<imagetarget id='bow1' src='targets/bow1.png'></imagetarget>
+		<imagetarget id='bow2' src='targets/bow2.png'></imagetarget>
+		<imagetarget id='bow3' src='targets/bow3.png'></imagetarget>
+		<imagetarget id='vase1' src='targets/vase1.png'></imagetarget>
+		<imagetarget id='vase2' src='targets/vase2.png'></imagetarget>
+		<imagetarget id='vase3' src='targets/vase3.png'></imagetarget>
 
     <video id="webcam-video" muted autoplay playsinline style="width:1px;position:absolute"></video>
     <canvas id="video-canvas" style="width:100%; height:100%; object-fit:cover; position:absolute"></canvas>
@@ -128,7 +114,6 @@
         <div style="position: absolute; bottom: 5vh; left: 0; z-index: -1;">
             <!-- <img src="十三行.png" style="width: 200px; height: auto;"> -->
         </div>
-
         <div style=" height: 80vh; width:auto; display: flex; flex-direction: column; align-items: center; ">
             <img src="Logo.png" style="width: auto; height: 30vh;">
             <button id="requestPermissionsButton" onclick="RequestPermissions()">相機授權</button>
@@ -150,11 +135,8 @@
             font-size: min(4vw, 40px) ;text-align: center; font-weight: bold;color: rgb(54, 28, 13);margin: 0;">
                 請以網頁瀏覽器開啟。
             </p>
-
-
         </div>
         <select id="chooseCamSel" style="display: none;" onchange="SelectCam()"></select>
-
     </div>
     <div id="screenshotDiv" style="display: none;" class="ctaDiv">
         <div
@@ -208,7 +190,6 @@
                 ShowError("Failed to initialize the experience.");
                 return;
             }
-
             await LoadWebcams();
             // document.getElementById("startARButton").style.display = "block";
             window.permissionsGranted = IsCameraPermissionGranted();
@@ -221,7 +202,6 @@
         function StartAR() {
             canvas.style.width = window.innerWidth + "px";
             canvas.style.height = window.innerHeight + "px";
-
             document.getElementById("startARDiv").style.display = "none";
             createUnityInstance(document.querySelector("#unity-canvas"), {
                 dataUrl: "Build/ImagineWebAR.data",
@@ -247,7 +227,7 @@
             loadingBar.style.display = "block";
         }
         //Set Facing Mode here ('environment', 'user', '')
-        window.unityFacingMode = "environment"
+		window.unityFacingMode = "environment"
         window.WEBCAM_SETTINGS = {
             video: {
                 facingMode: unityFacingMode,
@@ -321,7 +301,6 @@
                         //back and front
                         camDevices.push(mediaDevice);
                     }
-
                     ctr++;
                 }
             });
@@ -420,12 +399,10 @@
             // 顯示旋轉圈
             const spinner = document.getElementById("spinner");
             spinner.style.display = "block"; // 顯示旋轉圈
-
             // setTimeout(() => {
             //     spinner.style.display = "none"; // 模擬讀取完成後隱藏
             //     alert("讀取完成！");
             // }, 3000); // 假設讀取時間 3 秒
-
             navigator.permissions.query({ name: 'camera' }).then((result) => {
                 console.log("相機權限狀態:", result.state);
                 if (result.state === "granted") {
@@ -459,7 +436,6 @@
             //         checkPermissions();
             //     })
             //     .catch(err => console.log("Camera access denied", err));
-
             // // 位置授權
             // navigator.geolocation.getCurrentPosition(
             //     position => {
@@ -483,5 +459,4 @@
         }
     </script>
 </body>
-
 </html>
