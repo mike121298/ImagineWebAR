@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8       <meta name="viewport"
-        content='width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, user-scalable=no, shrink-to-fit=yes'>
+    <meta charset="utf-8">
+    <meta name="viewport" content='width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, user-scalable=no, shrink-to-fit=yes'>
     <title>十三行博物館|尋找遺物</title>
     <link rel="stylesheet" href="TemplateData/style.css">
     <link rel="icon" href="Logo.png" type="image/png">
@@ -10,6 +11,7 @@
         html {
             height: -webkit-fill-available;
         }
+
         body {
             margin: 0;
             padding: 0;
@@ -18,6 +20,7 @@
             width: 100vw;
             overflow: hidden;
         }
+
         .ctaDiv {
             display: flex;
             flex-direction: column;
@@ -31,6 +34,7 @@
             background: #fffa;
             z-index: 99;
         }
+
         #startARButton {
             padding: 10px 80px;
             /* 設定內邊距 */
@@ -56,6 +60,7 @@
             text-decoration: none;
             cursor: pointer;
         }
+
         #requestPermissionsButton {
             padding: 10px 40px;
             /* 設定內邊距 */
@@ -81,6 +86,7 @@
             text-decoration: none;
             cursor: pointer;
         }
+
         .loading-spinner {
             width: 80px;
             height: 80px;
@@ -96,15 +102,16 @@
         }
     </style>
 </head>
+
 <body>
     <!--IMAGETARGETS-->
-		<imagetarget id='coin' src='targets/coin.png'></imagetarget>
-		<imagetarget id='bow1' src='targets/bow1.png'></imagetarget>
-		<imagetarget id='bow2' src='targets/bow2.png'></imagetarget>
-		<imagetarget id='bow3' src='targets/bow3.png'></imagetarget>
-		<imagetarget id='vase1' src='targets/vase1.png'></imagetarget>
-		<imagetarget id='vase2' src='targets/vase2.png'></imagetarget>
-		<imagetarget id='vase3' src='targets/vase3.png'></imagetarget>
+    <imagetarget id='coin' src='targets/coin.png'></imagetarget>
+    <imagetarget id='bow1' src='targets/bow1.png'></imagetarget>
+    <imagetarget id='bow2' src='targets/bow2.png'></imagetarget>
+    <imagetarget id='bow3' src='targets/bow3.png'></imagetarget>
+    <imagetarget id='vase1' src='targets/vase1.png'></imagetarget>
+    <imagetarget id='vase2' src='targets/vase2.png'></imagetarget>
+    <imagetarget id='vase3' src='targets/vase3.png'></imagetarget>
 
     <video id="webcam-video" muted autoplay playsinline style="width:1px;position:absolute"></video>
     <canvas id="video-canvas" style="width:100%; height:100%; object-fit:cover; position:absolute"></canvas>
@@ -226,7 +233,7 @@
             loadingBar.style.display = "block";
         }
         //Set Facing Mode here ('environment', 'user', '')
-		window.unityFacingMode = "environment"
+        window.unityFacingMode = "environment"
         window.WEBCAM_SETTINGS = {
             video: {
                 facingMode: unityFacingMode,
@@ -458,4 +465,5 @@
         }
     </script>
 </body>
+
 </html>
