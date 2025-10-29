@@ -131,10 +131,6 @@
             font-size: min(6vw, 80px) ;text-align: center; font-weight: bold;color: rgb(54, 28, 13);margin: 0;">
                 需要訪問設備的相機
             </p>
-            <p id="text_infro_denied" style="white-space: nowrap;width: auto;margin: 0;
-            font-size: min(4vw, 40px) ;text-align: center; font-weight: bold;color: rgb(255, 0, 0);display:none;">
-                相機訪問被拒絕。</p>
-            <div class="loading-spinner" id="spinner"></div>
             <button id="startARButton" style=" display:none;font-weight: bold; color:rgb(255, 255, 255)"
                 onclick="StartAR()">開始</button>
             <p id="text_Authorization" style="display:none;text-align: center; font-size: min(6vw, 80px) ; 
@@ -144,7 +140,11 @@
             <p id="text_infro" style="white-space: nowrap;width: auto;
             font-size: min(4vw, 40px) ;text-align: center; font-weight: bold;color: rgb(54, 28, 13);margin: 0;">
                 請以網頁瀏覽器開啟。
-            </p>
+            </p>            
+            <p id="text_infro_denied" style="white-space: nowrap;width: auto;margin: 0;
+            font-size: min(4vw, 40px) ;text-align: center; font-weight: bold;color: rgb(255, 0, 0);display:none;">
+                相機訪問被拒絕。</p>
+            <div class="loading-spinner" id="spinner"></div>
         </div>
         <select id="chooseCamSel" style="display: none;" onchange="SelectCam()"></select>
         <!-- <p style="text-align: center; width:60vw;">This augmented reality experience requires access to your device's camera</p> -->
