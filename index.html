@@ -18,7 +18,7 @@
         body {
             margin: 0;
             padding: 0;
-            min-height: 100vh;
+            min-height: 100svh;
             min-height: -webkit-fill-available;
             width: 100vw;
             overflow: hidden;
@@ -129,16 +129,16 @@
     <video id="webcam-video" muted autoplay playsinline style="width:1px;position:absolute"></video>
     <canvas id="video-canvas" style="width:100%; height:100%; object-fit:cover; position:absolute"></canvas>
     <div id="startARDiv" class="ctaDiv"
-        style="background-image: url('background.png'); background-size: cover; width: 100vw; height: 100vh;">
-        <div style="position: absolute; bottom: 5vh; left: 0; z-index: -1;">
+        style="background-image: url('background.png'); background-size: cover; width: 100vw; height: 100svh;">
+        <div style="position: absolute; bottom: 5svh; left: 0; z-index: -1;">
         </div>
         <div
             style="height: 80%; width: 80%; margin: 0 auto; display: flex; flex-direction: column;position: relative; align-items:center; justify-content: space-between;">
             <img src="上方漸層背景.png" style="position: absolute;bottom:  0;width: auto; height: 120%;">
-            <img src="Logo.png" style="position: absolute;bottom: 10%;width: auto; height: 80%;">
+            <img src="Logo.png" style="position: absolute;bottom: 20%;width: auto; height: 65%;">
             <img src="人偶裝飾.png"  style="position: absolute;bottom: -10%;width: auto; height: 50%;">
         </div>
-        <div style=" height: 80vh; width:auto; display: flex; flex-direction: column; align-items: center; ">
+        <div style=" height: 80svh; width:auto; display: flex; flex-direction: column; align-items: center; ">
             <p></p>
             <p id="text_infro" style="white-space: nowrap;width: auto;
             font-size: min(4vw, 20px) ;text-align: center; font-weight:bold;color:  #632F00;margin: 0;">
@@ -183,7 +183,7 @@
     <div id="screenshotDiv" style="display: none;" class="ctaDiv">
         <div
             style="position:relative; background-color:white; padding:10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.25);">
-            <img id="screenshotImg" src="" alt="screenshot" style="width:80vw; height:80vh">
+            <img id="screenshotImg" src="" alt="screenshot" style="width:80vw; height:80svh">
             <button onclick="document.getElementById('screenshotDiv').style.display = 'none';"
                 style="position:absolute; transform:translateY(-100%); right:0; top:0">Close</button>
         </div>
