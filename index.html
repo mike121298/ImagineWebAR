@@ -21,7 +21,7 @@
             padding: 0;
             min-height: 100svh;
             min-height: -webkit-fill-available;
-            width: 100vw;
+            width: 100svw;
             overflow: hidden;
         }
 
@@ -130,7 +130,7 @@
     <video id="webcam-video" muted autoplay playsinline style="width:1px;position:absolute"></video>
     <canvas id="video-canvas" style="width:100%; height:100%; object-fit:cover; position:absolute"></canvas>
     <div id="startARDiv" class="ctaDiv"
-        style="background-image: url('background.png'); background-size: cover; width: 100svw; height: 100svh;">
+        style="background-image: url('background.png'); background-size: cover; width: 100ssvw; height: 100svh;">
         <div style="position: absolute; bottom: 5svh; left: 0; z-index: -1;">
         </div>
         <div
@@ -142,12 +142,12 @@
         <div style=" height: 80svh; width:auto; display: flex; flex-direction: column; align-items: center; ">
             <p></p>
             <p id="text_infro" style="white-space: nowrap;width: auto;
-            font-size: min(5vw, 20px) ;text-align: center; font-weight:bold;color:  #632F00;margin: 0;">
+            font-size: min(6svw, 20px) ;text-align: center; font-weight:bold;color:  #632F00;margin: 0;">
                 「透視古今，讓歷史在你眼前重現。」</p>
             <p></p>
             <p id="text_infro"
                 style="/* white-space: nowrap; */width: auto;
-            font-size: min(5vw, 20px) ;text-align: center; font-weight:bold;color: #632F00;margin: 0; padding: 0 20px;  ">
+            font-size: min(4svw, 20px) ;text-align: center; font-weight:bold;color: #632F00;margin: 0; padding: 0 20px;  ">
                 《12345博古通今》是一場連結古代與現代的AR互動體驗。
                 透過擴增實境，你將穿越千年時光，近距離觀察文物、重構歷史場景。
 
@@ -155,22 +155,22 @@
                 。</p>
             <button id="requestPermissionsButton" onclick="RequestPermissions()">相機授權</button>
             <p id="text_infro" style="white-space: nowrap;width: auto;
-            font-size: min(6vw, 80px) ;text-align: center; font-weight: bold;color: #9E0000;margin: 0;">
+            font-size: min(6svw, 80px) ;text-align: center; font-weight: bold;color: #9E0000;margin: 0;">
                 需要訪問設備的相機
             </p>
             <button id="startARButton" style=" display:none;font-weight: bold; color:rgb(255, 255, 255)"
                 onclick="StartAR()">開始</button>
 
             <p id="text_infro" style="white-space: nowrap;width: auto;
-            font-size: min(4vw, 20px) ;text-align: center; font-weight: bold;color: #9E0000;margin: 0;">
+            font-size: min(4svw, 20px) ;text-align: center; font-weight: bold;color: #9E0000;margin: 0;">
                 請以網頁瀏覽器開啟。
             </p>
-            <p id="text_Authorization" style="display:none;text-align: center; font-size: min(6vw, 80px) ; 
+            <p id="text_Authorization" style="display:none;text-align: center; font-size: min(6svw, 80px) ; 
                  font-weight: bold;color:rgb(54, 28, 13);margin: 0;">
                 授權成功
             </p>
             <p id="text_infro_denied" style="white-space: nowrap;width: auto;margin: 0;
-            font-size: min(4vw, 20px) ;text-align: center; font-weight: bold;color: #9E0000;display:none;">
+            font-size: min(4svw, 20px) ;text-align: center; font-weight: bold;color: #9E0000;display:none;">
                 相機訪問被拒絕。</p>
 
             <div class="loading-spinner" id="spinner"></div>
@@ -178,20 +178,20 @@
         <img src="十三行.png" style="width: 200px;bottom: 0; height: auto;">
 
         <select id="chooseCamSel" style="display: none;" onchange="SelectCam()"></select>
-        <!-- <p style="text-align: center; width:60vw;">This augmented reality experience requires access to your device's camera</p> -->
+        <!-- <p style="text-align: center; width:60svw;">This augmented reality experience requires access to your device's camera</p> -->
         <!-- <button id="startARButton" onclick="StartAR()" style="display:none">ALLOW ACCESS</button> -->
     </div>
     <div id="screenshotDiv" style="display: none;" class="ctaDiv">
         <div
             style="position:relative; background-color:white; padding:10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.25);">
-            <img id="screenshotImg" src="" alt="screenshot" style="width:80vw; height:80svh">
+            <img id="screenshotImg" src="" alt="screenshot" style="width:80svw; height:80svh">
             <button onclick="document.getElementById('screenshotDiv').style.display = 'none';"
                 style="position:absolute; transform:translateY(-100%); right:0; top:0">Close</button>
         </div>
     </div>
     <div id="confirmUrlDiv" style="display: none;" class="ctaDiv">
         <div
-            style="position:relative; background-color:white; padding:10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.25); width: 80vw; display:flex; flex-direction: column; align-items: center;">
+            style="position:relative; background-color:white; padding:10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.25); width: 80svw; display:flex; flex-direction: column; align-items: center;">
             <p id="confirmUrlText" style="text-align: center; width:80%; overflow: hidden; text-overflow: ellipsis;">Are
                 you sure you want to visit url.com?</p>
             <div>
@@ -203,7 +203,7 @@
         </div>
     </div>
     <div id="errorDiv" class="ctaDiv" style="display: none; background:#aaa">
-        <p id="errorText" style="text-align: center; width:60vw; color:white"></p>
+        <p id="errorText" style="text-align: center; width:60svw; color:white"></p>
     </div>
     <div id="unity-container" class="unity-mobile">
         <canvas id="unity-canvas" style="width: 100%; height: 100%;  z-index: -99"></canvas>
@@ -423,8 +423,8 @@
         function ShowScreenshot(dataUrl) {
             document.getElementById("screenshotDiv").style.display = "flex";
             document.getElementById("screenshotImg").src = dataUrl;
-            document.getElementById("screenshotImg").style.width = "80vw";
-            document.getElementById("screenshotImg").style.height = 80 / window.innerWidth * window.innerHeight + "vw";
+            document.getElementById("screenshotImg").style.width = "80svw";
+            document.getElementById("screenshotImg").style.height = 80 / window.innerWidth * window.innerHeight + "svw";
         }
         function ShowConfirmUrl(url) {
             document.getElementById("confirmUrlDiv").style.display = "flex";
